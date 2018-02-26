@@ -69,7 +69,7 @@ public class Transer {
 		return getTrans(src.getClass());
 	}
 
-	private Trans getTrans(Class<? extends Object> clz) throws TransProcessException {
+	private Trans getTrans(Class<?> clz) throws TransProcessException {
 		Trans trans = clz.getAnnotation(Trans.class);
 		if (trans == null) {
 			throw new TransProcessException("There is no trans annotation in " + clz.getName());
